@@ -1,4 +1,5 @@
 [build]
-  publish = "Uni-Project-main/Explore_georgia_frontend_v1"
-  functions = "Uni-Project-main/netlify/functions"
+    base = "Uni-Project-main"
+  publish = "Explore_georgia_frontend_v1"
+  functions = "netlify/functions"
 
