@@ -1,3 +1,4 @@
 [build]
-  publish = "Explore_georgia_frontend_v1"
-  functions = "netlify/functions"
+  publish = "Uni-Project-main/Explore_georgia_frontend_v1"
+  functions = "Uni-Project-main/netlify/functions"
+
