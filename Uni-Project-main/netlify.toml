@@ -1,0 +1,3 @@
+[build]
+  publish = "Explore_georgia_frontend_v1"
+  functions = "netlify/functions"

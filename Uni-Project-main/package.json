@@ -1,0 +1,9 @@
+{
+  "name": "explore-georgia-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explore Georgia uni project (static site + Netlify Function email sender).",
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}
