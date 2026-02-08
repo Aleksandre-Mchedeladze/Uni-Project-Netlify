@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Explore Georgia - Tourism Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="te-header">
+        <div class="te-container te-header-inner">
+            <div class="te-logo">
+                <span class="te-logo-main">Explore Georgia</span>
+                <span class="te-logo-sub" data-i18n="logoSubtitle"></span>
+            </div>
+
+            <nav class="te-nav">
+                <button class="te-nav-toggle" id="navToggle">☰</button>
+                <ul class="te-nav-list" id="navList">
+                    <li><a href="index.html" data-i18n="menuHome"></a></li>
+                    <li class="te-dropdown">
+                        <a href="destinations.html" class="te-dropdown-toggle" data-i18n="menuDestinations"></a>
+                        <ul class="te-dropdown-menu">
+                            <li><a href="destinations.html#mountains" data-i18n="menuMountains"></a></li>
+                            <li><a href="destinations.html#sea" data-i18n="menuSea"></a></li>
+                            <li><a href="destinations.html#cities" data-i18n="menuCities"></a></li>
+                            <li><a href="destinations.html#events" data-i18n="menuEvents"></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" data-i18n="menuAbout"></a></li>
+                    <li><a href="#contact" data-i18n="menuContact"></a></li>
+                </ul>
+            </nav>
+
+            <div class="te-lang-switch">
+                <button class="te-lang-btn" data-lang="en">EN</button>
+                <button class="te-lang-btn" data-lang="ge">ქარ</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Slider -->
+        <section class="te-hero" id="home">
+            <div class="te-hero-overlay"></div>
+            <div class="te-hero-slider" id="heroSlider">
+                <div class="te-slide active" data-slide="0">
+                    <div class="te-slide-bg te-slide-1"></div>
+                    <div class="te-slide-content">
+                        <h1 data-i18n="slide1Title"></h1>
+                        <p data-i18n="slide1Text"></p>
+                        <a href="#destinations" class="te-btn" data-i18n="slideButtonExplore"></a>
+                    </div>
+                </div>
+                <div class="te-slide" data-slide="1">
+                    <div class="te-slide-bg te-slide-2"></div>
+                    <div class="te-slide-content">
+                        <h1 data-i18n="slide2Title"></h1>
+                        <p data-i18n="slide2Text"></p>
+                        <a href="#destinations" class="te-btn" data-i18n="slideButtonPlan"></a>
+                    </div>
+                </div>
+                <div class="te-slide" data-slide="2">
+                    <div class="te-slide-bg te-slide-3"></div>
+                    <div class="te-slide-content">
+                        <h1 data-i18n="slide3Title"></h1>
+                        <p data-i18n="slide3Text"></p>
+                        <a href="#contact" class="te-btn" data-i18n="slideButtonContact"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="te-slider-dots" id="sliderDots"></div>
+        </section>
+
+        <!-- Destinations -->
+        <section class="te-section" id="destinations">
+            <div class="te-container">
+                <h2 class="te-section-title" data-i18n="destinationsTitle"></h2>
+                <p class="te-section-subtitle" data-i18n="destinationsSubtitle"></p>
+
+                <div id="destinationsGrid" class="te-grid">
+                    <!-- Destination cards injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="te-section te-section-alt" id="about">
+            <div class="te-container te-about-layout">
+                <div>
+                    <h2 class="te-section-title" data-i18n="aboutTitle"></h2>
+                    <p data-i18n="aboutText1"></p>
+                    <p data-i18n="aboutText2"></p>
+                </div>
+                <div class="te-about-badges">
+                    <div class="te-badge">
+                        <span class="te-badge-number">1</span>
+                        <span data-i18n="aboutBadge1"></span>
+                    </div>
+                    <div class="te-badge">
+                        <span class="te-badge-number">2</span>
+                        <span data-i18n="aboutBadge2"></span>
+                    </div>
+                    <div class="te-badge">
+                        <span class="te-badge-number">3</span>
+                        <span data-i18n="aboutBadge3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="te-section" id="contact">
+            <div class="te-container te-contact-layout">
+                <div>
+                    <h2 class="te-section-title" data-i18n="contactTitle"></h2>
+                    <p data-i18n="contactText"></p>
+                    <ul class="te-contact-list">
+                        <li><strong data-i18n="contactEmailLabel"></strong> hello@exploregeorgia.ge</li>
+                        <li><strong data-i18n="contactPhoneLabel"></strong> +995 555 00 00 00</li>
+                        <li><strong data-i18n="contactAddressLabel"></strong> Tbilisi, Georgia</li>
+                    </ul>
+                </div>
+
+                <form class="te-form" id="contactForm">
+                    <div class="te-form-row">
+                        <label data-i18n="formNameLabel"></label>
+                        <input id="name" type="text" placeholder="" data-i18n-placeholder="formNamePlaceholder" required />
+                    </div>
+                    <div class="te-form-row">
+                        <label data-i18n="formEmailLabel"></label>
+                        <input id="email" type="email" placeholder="" data-i18n-placeholder="formEmailPlaceholder" required />
+                    </div>
+                    <div class="te-form-row">
+                        <label data-i18n="formMessageLabel"></label>
+                        <textarea id="message" rows="4" placeholder="" data-i18n-placeholder="formMessagePlaceholder" required></textarea>
+                    </div>
+                    <button type="submit" class="te-btn te-btn-outline" data-i18n="formButtonSend"></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="te-footer">
+        <div class="te-container te-footer-inner">
+            <span>&copy; <span id="year"></span> Explore Georgia</span>
+            <span data-i18n="footerText"></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
